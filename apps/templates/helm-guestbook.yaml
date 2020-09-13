@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-guestbook
+  name: {{ .Values.spec.destination.name }}-helm-guestbook
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
