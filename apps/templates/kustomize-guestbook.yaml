@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: {{ .Values.spec.destination.name }}-kustomize-guestbook
   namespace: argocd
+  labels:
+    cluster: {{ .Values.spec.destination.name }}
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
