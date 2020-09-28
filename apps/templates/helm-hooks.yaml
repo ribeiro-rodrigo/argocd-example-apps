@@ -9,7 +9,7 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: helm-hooks
+    namespace: default
     name: {{ .Values.spec.destination.name }}
   project: default
   source:
